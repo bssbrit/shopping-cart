@@ -1,0 +1,13 @@
+Site com 4 abas: Home Men Women            (icone de shopping cart)
+
+dar fetch na api
+
+dividir a informações 
+em homem e mulher e mandar para os seus components
+
+
+Criar uma navbar que vai mandar para os endereços
+
+
+
+
