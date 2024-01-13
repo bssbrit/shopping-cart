@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import cart from "/cart.svg";
-const NavBar = () => {
+import PropTypes from "prop-types";
+const NavBar = ({ cartItems }) => {
   return (
     <nav>
       <ul>
@@ -17,10 +18,13 @@ const NavBar = () => {
           <Link to="/shop/cart">
             <img src={cart} alt="cart icon" />
           </Link>
+          <p>{cartItems.length}</p>
         </li>
       </ul>
     </nav>
   );
 };
-
+NavBar.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+};
 export default NavBar;

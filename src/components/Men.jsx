@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import ItemDisplayer from "./ItemDisplayer";
-const Men = () => {
+const Men = ({ addToCart }) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -42,9 +43,11 @@ const Men = () => {
     return (
       <div>
         <p>Hi this is the men section</p>
-        <ItemDisplayer data={data} />
+        <ItemDisplayer addToCart={addToCart} data={data} />
       </div>
     );
 };
-
+Men.propTypes = {
+  addToCart: PropTypes.func.isRequired,
+};
 export default Men;
